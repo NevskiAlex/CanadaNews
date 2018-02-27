@@ -1,0 +1,82 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $headings-font-family;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  text-transform: uppercase;
+  margin: 0 0 0.9em;
+  line-height: 1;
+
+  @include media('<hd-screen') {
+    font-size: 40px;
+  }
+
+  @include media('<desktop') {
+    font-size: 28px;
+    line-height: 1.2; 
+  }
+
+  @include media('<tablet') {
+      font-size: 25px;  
+  }
+
+  @include media('<phone') {
+      font-size: 20px;  
+  }
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  font-family: $base-font-sans-serif;
+  color: $blue;
+  font-weight: 400; 
+
+  @include media('<desktop') {
+      font-size: 15px;  
+      line-height: 1.2; 
+  }
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    text-decoration: underline;
+  }
+}
